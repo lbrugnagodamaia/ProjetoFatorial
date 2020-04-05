@@ -85,7 +85,7 @@ public class telaFatorial extends javax.swing.JFrame {
 
     private void txtNStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_txtNStateChanged
         // TODO add your handling code here
-        int n = Integer.parseInt(txtN.getValue().toString());
+       /* int n = Integer.parseInt(txtN.getValue().toString());
         int c = n;
         int f = 1;
         
@@ -95,7 +95,22 @@ public class telaFatorial extends javax.swing.JFrame {
         }
         
         lblFat.setText(Integer.toString(f));
-        //5! = 5 x 4 x 3 x 2 x 1
+        */
+        int numero = (int) txtN.getValue();
+        int numero2 = (int) txtN.getValue();
+        String fatorial = Integer.toString(numero);
+        while(numero>1){
+          
+                numero2 *= --numero;
+                fatorial += (" x " + numero);
+            
+        }
+        
+        lblFat.setText(Integer.toString(numero2));
+        System.out.println(fatorial + " = " + numero2);
+
+
+        
     }//GEN-LAST:event_txtNStateChanged
 
     /**
